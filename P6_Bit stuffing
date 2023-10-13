@@ -41,3 +41,27 @@ int main()
         printf("%d",b[i]);
     return 0;
 }
+
+
+
+
+
+//*-*-*-*-*-**-*-*-*-*-*-Code in Python*-*-*-"*-"-"-"-"-"-*-
+
+bits=[]
+a=int(input("enter mo of bits to input"))
+for i in range(a):
+    b=int(input("enter bits"))
+    bits.append(b)
+stuffed=[]
+count=0
+for i in range(len(bits)):
+    if bits[i]==1:
+        count=count+1
+        stuffed.append(bits[i])
+    elif bits[i]!=1:
+        count=0
+        stuffed.append(bits[i])
+    if count==5:
+        stuffed.insert(i+1,0)
+print (stuffed)
